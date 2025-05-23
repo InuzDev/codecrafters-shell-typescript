@@ -5,12 +5,9 @@ const rl = createInterface({
   output: process.stdout,
 });
 
-// You can try:
-// console.log(`${answer}: command not found`)
-// OR, you can try:
-// rl.write(`${answer}: command not found`)
-
-rl.question("$ ", (answer) => {
-  rl.write(`${answer}: command not found`)
-  rl.close();
-});
+while (true) {
+  rl.question("$ ", (answer) => {
+    rl.write(`${answer}: command not found`)
+    rl.close();
+  });
+}
